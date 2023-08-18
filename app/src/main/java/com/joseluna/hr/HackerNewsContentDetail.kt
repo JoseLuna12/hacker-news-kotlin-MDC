@@ -1,7 +1,6 @@
 package com.joseluna.hr
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +8,10 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.progressindicator.LinearProgressIndicator
+
 
 class HackerNewsContentDetail : Fragment() {
 
@@ -20,7 +21,9 @@ class HackerNewsContentDetail : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val title = args.title
-        (activity as AppCompatActivity).supportActionBar?.subtitle = title
+        (activity as AppCompatActivity).supportActionBar.apply {
+            this?.subtitle = title
+        }
     }
 
     override fun onCreateView(
