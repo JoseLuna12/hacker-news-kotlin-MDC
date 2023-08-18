@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HackerNewsContentDetail">
+
+    <LinearLayout
+        android:id="@+id/loading_indicator"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start">
+
+   <com.google.android.material.progressindicator.LinearProgressIndicator
+       android:id="@+id/loadingProgress"
+       style="?android:attr/progressBackgroundTint"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:max="100"
+       android:layout_centerHorizontal="true"
+       />
+    </LinearLayout>
+    
+    <WebView
+        android:id="@+id/web_view"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        />
+
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/item_list_fragment2">
+    <fragment
+        android:id="@+id/item_list_fragment2"
+        android:name="com.joseluna.hr.Item_list_fragment"
+        android:label="fragment_item_list_fragment"
+        tools:layout="@layout/fragment_item_list_fragment" >
+        <action
+            android:id="@+id/action_item_list_fragment2_to_hackerNewsContentDetail"
+            app:destination="@id/hackerNewsContentDetail"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/hackerNewsContentDetail"
+        android:name="com.joseluna.hr.HackerNewsContentDetail"
+        android:label="fragment_hacker_news_content_detail"
+        tools:layout="@layout/fragment_hacker_news_content_detail" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>
